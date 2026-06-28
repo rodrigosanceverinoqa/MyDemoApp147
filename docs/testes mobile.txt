@@ -1,0 +1,48 @@
+Testes Mobile
+
+Existem vários tipos de aplicativos (apps)
+- Celulares/Smartphone: Android, Iphone 
+- Tablets: Android, Iphone 
+- SmartTV
+- Wearables (vestíveis): smartband (pulseira), smartwatches (relógios), smartglasses (óculos)
+- Eletro/Eletronicos
+- Sistema de mídia de automóvel
+
+Pré-requisitos
+Cenário 1 - os testes são locais (na minha máquina)
+- SDK (Kit de comunicação/desenvolvimento) --> existe um para cada versão do sistema operacional (android)
+- Emulador --> Android Studio (https://developer.android.com/?hl=pt-br)
+- Appium Service/Server/Desktop
+
+Cenário 2 - os testes são remotos
+- Conta em um serviço (Saucelabs, Browserstack, Perfecto, outros)
+
+Comuns aos 2 cenários:
+- APK do app alvo (instalador do aplicativo que queremos testar)
+- APK Info (descobrir appPackage e o appActivity)
+- Appium Inspector
+
+Máquina Ideal
+- Processador I5, I7 ou I9, ou equivalente AMD - Famílias 12 em diante
+- GPU (Placa de vídeo) - não ter uma placa de vídeo offline
+- Memória RAM: 16 GB, 32 GB ou mais
+- Disco: SSD pelo menos 512 Gb ou 1 Tb
+
+Importante:
+- Um computador/notebook Intel/AMD pode rodar emuladores android (somente)
+- Um computador/notebook mac pode rodar emuladores android e IOS
+
+
+Executar testes, tanto no local ou no remoto:
+- emuladores
+- aparelhos físicos
+
+
+Através do APK Info, vamos descobrir 2 informações sobre o APP alvo:
+- appPackage:  com.saucelabs.mydemoapp.android 
+- appActivity: com.saucelabs.mydemoapp.android.view.activities.SplashActivity
+
+Tipos de Apps:
+- Nativo: criado especificamente para um sistema operacional
+- Hibrido: são gerados dois Apps a partir do mesmo código
+- PWA/WebDav: é um site disfarçado de App
