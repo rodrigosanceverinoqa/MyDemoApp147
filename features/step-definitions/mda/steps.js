@@ -1,12 +1,4 @@
-import { Given, When, Then, Before, After } from '@cucumber/cucumber';
-
-Before(async () => {
-    await driver.activateApp("com.saucelabs.mydemoapp.android");
-});
-
-After(async () => {
-    await driver.terminateApp("com.saucelabs.mydemoapp.android");
-});
+import { Given, When, Then } from '@cucumber/cucumber';
 
 Given("que abro o MyDemoApp", async () => {
     const img_produto = await driver.$(
@@ -27,7 +19,7 @@ Then("exibe a pagina de detalhes com o {string}", async (nome_produto) => {
     await expect(await lbl_nome_produto.getText()).toEqual(nome_produto);
 });
 
-Then ("o {string}", async (preco_produto) => {
+Then("o {string}", async (preco_produto) => {
     await driver.action('pointer')
         .move({ duration: 0, x: 601, y: 1948 })
         .down({ button: 0 })
